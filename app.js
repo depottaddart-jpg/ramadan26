@@ -265,7 +265,7 @@ function categorizeRecipe(title) {
     }
 
     // Poultry
-    if (titleLower.includes('دجاج') || titleLower.includes('ديك رومي') ||
+    if (titleLower.includes('دجاج') || titleLower.includes('فيليه الديك الرومي') ||
         titleLower.includes('كوكلي')) {
         return 'volaille';
     }
