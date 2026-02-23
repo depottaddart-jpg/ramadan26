@@ -211,6 +211,7 @@ function createRecipeCard(recipe, index) {
     return `
         <article class="recipe-card" data-id="${recipe.id}" role="listitem" style="animation-delay: ${index * CONFIG.animationDelay}ms">
             <div class="recipe-image">
+                ${recipe.image ? `<img src="${escapeHtml(recipe.image)}" alt="${escapeHtml(recipe.title)}" loading="lazy" onerror="this.style.display='none'">` : ''}
                 <span class="recipe-category">${categoryLabel}</span>
             </div>
             <div class="recipe-content">
@@ -374,6 +375,7 @@ function openModal(recipe) {
 
     const modalContent = `
         <div class="recipe-detail-header">
+            ${recipe.image ? `<img src="${escapeHtml(recipe.image)}" alt="${escapeHtml(recipe.title)}" class="recipe-detail-image" loading="lazy" onerror="this.style.display='none'">` : ''}
             <h2 class="recipe-detail-title" id="modal-title">${escapeHtml(recipe.title)}</h2>
             <div class="recipe-detail-meta">
                 <span class="recipe-detail-meta-item">

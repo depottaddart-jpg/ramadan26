@@ -603,6 +603,20 @@ ul, ol {
     opacity: 0.5;
 }
 
+.recipe-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.recipe-image:has(img) .recipe-category {
+    z-index: 2;
+}
+
 .recipe-category {
     position: absolute;
     top: var(--space-md);
@@ -764,6 +778,14 @@ ul, ol {
     margin-bottom: var(--space-xl);
     padding-bottom: var(--space-lg);
     border-bottom: 2px solid var(--color-gray-200);
+}
+
+.recipe-detail-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .recipe-detail-title {
